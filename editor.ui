@@ -22,25 +22,29 @@ dock
     SceneTree
         child = tree.Scene
         title = Scene tree
+propertybrowsereditor
+    PropertyBrowser
+        position
+            type = spinner
+            minvalue = -1000
+            maxvalue = 1000
+            input = float
+            step = 0.1
+        scale
+            type = spinner
+            minvalue = 0.1
+            maxvalue = 100
+            input = float
+            step = 0.1
 propertybrowseritem
     PropertyBrowser
         positionx
             title = position.x
             group = Geometry
             value = 1.2
-        positiony
-            title = position.y
-            group = Geometry
-            value = 0.999
-        positionz
-            title = position.z
-            group = Geometry
-            value = 230.7
 propertybrowser
     PropertyBrowser
         item = positionx
-        item = positiony
-        item = positionz
 dock
     ScenePropertyBrowser
         child = propertybrowser.PropertyBrowser
