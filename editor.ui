@@ -24,6 +24,8 @@ dock
         title = Scene tree
 propertybrowsereditor
     PropertyBrowser
+        model
+            type = combobox
         position
             type = spinner
             minvalue = -1000
@@ -50,7 +52,6 @@ dock
         child = propertybrowser.PropertyBrowser
         title = Property browser
 mainwindow
-    file = ui/MainWindow.ui
     dock = SceneTree right
     dock = ScenePropertyBrowser right
     visible = 1
