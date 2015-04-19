@@ -15,17 +15,24 @@ menu
         action = SceneAddNode
 tree
     Scene
-        count = 0
-        itemmenu = SceneItemMenu
         menu = SceneMenu
 dock
     SceneTree
         child = tree.Scene
         title = Scene tree
+thumbnaildialog
+    model
+        title = Select model
+    material
+        title = Select material
 propertybrowsereditor
     PropertyBrowser
+        material
+            type = thumbnaildialog
+            thumbnaildialog = material
         model
-            type = combobox
+            type = thumbnaildialog
+            thumbnaildialog = model
         position
             type = spinner
             minvalue = -1000
