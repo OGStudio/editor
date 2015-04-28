@@ -45,6 +45,8 @@ propertybrowsereditor
             maxvalue = 100
             input = float
             step = 0.1
+        script
+            type = combobox
 propertybrowseritem
     PropertyBrowser
         positionx
