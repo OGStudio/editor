@@ -27,6 +27,8 @@ thumbnaildialog
         title = Select material
 propertybrowsereditor
     PropertyBrowser
+        light
+            type = combobox
         material
             type = thumbnaildialog
             thumbnaildialog = material
