@@ -1,6 +1,9 @@
 <compositor>
     <include>pipeline/templates.xml</include>
-    <include>pipeline/textures.xml</include>
+    <!-- Default texture -->
+    <texture name="DEFAULT_TEXTURE" template="textureTemplate">
+        <file>pipeline/textures/noise_tex.png</file>
+    </texture>
     <include>pipeline/materials.xml</include>
     <shader name="pass1VS" type="vertex">
         <file>pipeline/pass1.vert</file>
@@ -28,8 +31,8 @@
     <technique>
         <forward_pass name="pass1">
             <clear_color>0 0 0 1</clear_color>
-            <!-- Defaults begin -->
-            <texture unit="0" varname="diffuseMap">noise</texture>
+            <!-- Defaults material settings -->
+            <texture unit="0" varname="diffuseMap">DEFAULT_TEXTURE</texture>
             <uniform name="useNormalMap" type="int">
                 <value>0</value>
             </uniform>

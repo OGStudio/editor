@@ -1,4 +1,5 @@
 <compositor>
+    <include>pipeline/textures.xml</include>
     <material name="columnSurface">
         <texture unit="0" varname="diffuseMap">columnDiffuse</texture>
         <texture unit="1" varname="normalMap">columnNormal</texture>

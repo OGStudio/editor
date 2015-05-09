@@ -1,9 +1,4 @@
 <compositor>
-    <!-- defaults begin -->
-    <texture name="noise" template="textureTemplate">
-        <file>pipeline/textures/noise_tex.png</file>
-    </texture>
-    <!-- defaults end -->
     <texture name="boxNormal" template="textureTemplate">
         <file>pipeline/textures/box_n.png</file>
     </texture>
