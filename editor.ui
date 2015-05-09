@@ -41,6 +41,12 @@ propertybrowsereditor
             maxvalue = 1000
             input = float
             step = 0.1
+        rotation
+            type = spinner
+            minvalue = -359
+            maxvalue = 359
+            input = float
+            step = 1
         scale
             type = spinner
             minvalue = 0.1
