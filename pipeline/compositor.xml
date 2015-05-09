@@ -4,7 +4,8 @@
     <texture name="DEFAULT_TEXTURE" template="textureTemplate">
         <file>pipeline/textures/noise_tex.png</file>
     </texture>
-    <include>pipeline/materials.xml</include>
+    <!-- Default texture ends -->
+    <!--<include>pipeline/materials.xml</include>-->
     <shader name="pass1VS" type="vertex">
         <file>pipeline/pass1.vert</file>
     </shader>
@@ -31,7 +32,7 @@
     <technique>
         <forward_pass name="pass1">
             <clear_color>0 0 0 1</clear_color>
-            <!-- Defaults material settings -->
+            <!-- Default material settings -->
             <texture unit="0" varname="diffuseMap">DEFAULT_TEXTURE</texture>
             <uniform name="useNormalMap" type="int">
                 <value>0</value>
@@ -39,7 +40,7 @@
             <uniform name="useGlowMap" type="int">
                 <value>0</value>
             </uniform>
-            <!-- Defaults end -->
+            <!-- Default material settings end -->
             <shader>pass1VS</shader>
             <shader>pass1FS</shader>
             <output_buffer target="color0">pass1Positions</output_buffer>
