@@ -20,11 +20,24 @@ dock
     SceneTree
         child = tree.Scene
         title = Scene tree
+thumbnaildialogitem
+    model
+        abc
+            title = abc
+            image = pipeline/textures/noise_tex.png
+        def
+            title = def
+            image = pipeline/textures/noise_tex.png
 thumbnaildialog
     model
         title = Select model
+        ui = ui/ThumbnailDialog.ui
+        visible = 1
+        item = abc
+        item = def
     material
         title = Select material
+        ui = ui/ThumbnailDialog.ui
 propertybrowsereditor
     PropertyBrowser
         light
