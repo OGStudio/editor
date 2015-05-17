@@ -32,7 +32,6 @@ thumbnaildialog
     model
         title = Select model
         ui = ui/ThumbnailDialog.ui
-        visible = 1
         item = abc
         item = def
     material
