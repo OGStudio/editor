@@ -18,8 +18,11 @@ menu
         action = FileOpen
         action = FileSave
         action = FileQuit
+    Docks
+        title = &Docks
 menubar
     MenuBar
         menu = File
+        menu = Docks
 
 mainwindow.menubar = MenuBar
