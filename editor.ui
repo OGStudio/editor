@@ -6,13 +6,18 @@ filedialog
 action
     SceneAddNode
         title = Add node
+    SceneCopyNode
+        title = Copy node
     SceneDeleteNode
         title = Delete node
+    ScenePasteNode
+        title = Paste node
 menu
-    SceneItemMenu
-        action = SceneDeleteNode
     SceneMenu
         action = SceneAddNode
+        action = SceneCopyNode
+        action = ScenePasteNode
+        action = SceneDeleteNode
 tree
     Scene
         menu = SceneMenu
