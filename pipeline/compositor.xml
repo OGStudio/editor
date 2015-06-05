@@ -1,29 +1,8 @@
 <compositor>
+    <!--
     <include>pipeline/templates.xml</include>
-    <!-- Default textures and materials -->
-    <texture name="DEFAULT_TEXTURE" template="textureTemplate">
-        <file>pipeline/textures/noise_tex.png</file>
-    </texture>
-    <texture name="SELECTION_TEXTURE" template="textureTemplate">
-        <file>pipeline/textures/selection.png</file>
-    </texture>
-    <texture name="SELECTION_NORMAL_TEXTURE" template="textureTemplate">
-        <file>pipeline/textures/box_n.png</file>
-    </texture>
-    <material name="SELECTION_MATERIAL">
-        <texture unit="0" varname="diffuseMap">SELECTION_TEXTURE</texture>
-        <texture unit="1" varname="normalMap">SELECTION_NORMAL_TEXTURE</texture>
-        <texture unit="2" varname="glowMap">SELECTION_TEXTURE</texture>
-        <uniform name="useNormalMap" type="int">
-            <value>1</value>
-        </uniform>
-        <uniform name="useGlowMap" type="int">
-            <value>1</value>
-        </uniform>
-        <polygonMode>line</polygonMode>
-    </material>
-    <!-- Default textures and materilas end -->
-    <!--<include>pipeline/materials.xml</include>-->
+    <include>pipeline/textures.xml</include>-->
+    <include>pipeline/materials.xml</include>
     <shader name="pass1VS" type="vertex">
         <file>pipeline/pass1.vert</file>
     </shader>
