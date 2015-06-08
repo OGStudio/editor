@@ -1,0 +1,12 @@
+<compositor>
+    <include>pipeline/templates.xml</include>
+    <texture name="DEFAULT_TEXTURE" template="textureTemplate">
+        <file>pipeline/textures/noise_tex.png</file>
+    </texture>
+    <texture name="EDITOR_SELECTION_TEXTURE" template="textureTemplate">
+        <file>pipeline/textures/selection.png</file>
+    </texture>
+    <texture name="EDITOR_SELECTION_GLOW_TEXTURE" template="textureTemplate">
+        <file>pipeline/textures/selection.png</file>
+    </texture>
+</compositor>

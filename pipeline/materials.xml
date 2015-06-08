@@ -1,0 +1,11 @@
+<compositor>
+    <include>pipeline/textures.xml</include>
+    <material name="EDITOR_SELECTION_MATERIAL">
+        <texture unit="0" varname="diffuseMap">EDITOR_SELECTION_TEXTURE</texture>
+        <texture unit="2" varname="glowMap">EDITOR_SELECTION_GLOW_TEXTURE</texture>
+        <uniform name="useGlowMap" type="int">
+            <value>1</value>
+        </uniform>
+        <polygonMode>line</polygonMode>
+    </material>
+</compositor>
