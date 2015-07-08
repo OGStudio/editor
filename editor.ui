@@ -12,19 +12,92 @@ action
         title = Delete node
     ScenePasteNode
         title = Paste node
+    Tree2Add
+        title = Add
+    Tree2Delete
+        title = Delete
 menu
     SceneMenu
         action = SceneAddNode
         action = SceneCopyNode
         action = ScenePasteNode
         action = SceneDeleteNode
+    Tree2Menu
+        action = Tree2Add
+        action = Tree2Delete
 tree
     Scene
         menu = SceneMenu
+tree2
+    Scene
+        menu = Tree2Menu
+tree2item
+    Scene
+        one
+            parent = ROOT
+        two
+            parent = ROOT
+        three
+            parent = ROOT
+        four
+            parent = ROOT
+        five
+            parent = ROOT
+        2_1
+            parent = four
+        2_2
+            parent = four
+        2_3
+            parent = four
+        3_1
+            parent = 2_2
+        3_2
+            parent = 2_2
+        six
+            parent = ROOT
+        seven
+            parent = ROOT
+        eight
+            parent = ROOT
+        nine
+            parent = ROOT
+        ten
+            parent = ROOT
+        eleven
+            parent = ROOT
+        twelve
+            parent = ROOT
+        thirteen
+            parent = ROOT
+        forteen
+            parent = ROOT
+        fifteen
+            parent = ROOT
+        sixteen
+            parent = ROOT
+        seventeen
+            parent = ROOT
+        eighteen
+            parent = ROOT
+        nineteen
+            parent = ROOT
+        twenty
+            parent = ROOT
+        f_1
+            parent = fifteen
+        f_2
+            parent = fifteen
+        f_3
+            parent = fifteen
+        f_4
+            parent = fifteen
 dock
     SceneTree
         child = tree.Scene
         title = Scene tree
+    SceneTree2
+        child = tree2.Scene
+        title = Scene tree #2
 thumbnaildialogitem
     model
         abc
@@ -58,7 +131,7 @@ propertybrowsereditor
             step = 0.1
         rotation
             type = spinner
-            minvalue = -359
+            minvalue = 0
             maxvalue = 359
             input = float
             step = 1
@@ -86,5 +159,6 @@ dock
 mainwindow
     dock = SceneTree right
     dock = ScenePropertyBrowser right
+    dock = SceneTree2 left
     visible = 1
 
