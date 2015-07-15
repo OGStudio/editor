@@ -30,13 +30,44 @@ tree
         menu = SceneMenu
 tree2
     Scene
+        column = Key
+        column = Value
+        column = Other
         menu = Tree2Menu
+        dragAndDrop = 1
+        renaming = 1
+        instantEditing = 1
+tree2editor
+    Scene
+        light
+            type = combobox
+            item = wazup
+            item = abc
+            item = def
+            item = ghi
+        another
+            type = thumbnailDialog
+            thumbnailDialog = another
+        position
+            type = spinner
+            minValue = -1000
+            maxValue = 1000
+            input = float
+            step = 0.1
 tree2item
     Scene
         one
             parent = ROOT
+            value = wazup
+            value = 129
+            editor = light
+            editor = position
         two
             parent = ROOT
+            value = 0
+            value = abc
+            editor = position
+            editor = another
         three
             parent = ROOT
         four
@@ -98,14 +129,6 @@ dock
     SceneTree2
         child = tree2.Scene
         title = Scene tree #2
-thumbnaildialogitem
-    model
-        abc
-            title = abc
-            image = pipeline/textures/noise_tex.png
-        def
-            title = def
-            image = pipeline/textures/noise_tex.png
 thumbnaildialog
     model
         title = Select model
@@ -113,6 +136,25 @@ thumbnaildialog
     material
         title = Select material
         ui = ui/ThumbnailDialog.ui
+    another
+        title = Select another
+        ui = ui/ThumbnailDialog.ui
+thumbnaildialogitem
+    another
+        abc
+            title = abc
+            image = pipeline/textures/noise_tex.png
+        def
+            title = def
+            image = pipeline/textures/noise_tex.png
+        ghi
+            title = ghi
+            image = pipeline/textures/noise_tex.png
+thumbnaildialog
+    another
+        item = abc
+        item = def
+        item = ghi
 propertybrowsereditor
     PropertyBrowser
         light
