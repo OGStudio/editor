@@ -12,39 +12,41 @@ action
         title = Delete node
     ScenePasteNode
         title = Paste node
-    Tree2Add
+    Scene2Add
         title = Add
-    Tree2Delete
+    Scene2Copy
+        title = Copy
+    Scene2Delete
         title = Delete
+    Scene2Paste
+        title = Paste
 menu
     SceneMenu
         action = SceneAddNode
         action = SceneCopyNode
         action = ScenePasteNode
         action = SceneDeleteNode
-    Tree2Menu
-        action = Tree2Add
-        action = Tree2Delete
+    Scene2Menu
+        action = Scene2Add
+        action = Scene2Copy
+        action = Scene2Paste
+        action = Scene2Delete
 tree
     Scene
         menu = SceneMenu
 tree2
-    Scene
+    PB2
         column = Key
         column = Value
-        column = Other
-        menu = Tree2Menu
+        instantEditing = 1
+    Scene2
+        menu = Scene2Menu
         dragAndDrop = 1
         renaming = 1
-        instantEditing = 1
 tree2editor
-    Scene
+    PB2
         light
             type = combobox
-            item = wazup
-            item = abc
-            item = def
-            item = ghi
         another
             type = thumbnailDialog
             thumbnailDialog = another
@@ -54,81 +56,32 @@ tree2editor
             maxValue = 1000
             input = float
             step = 0.1
+        rotation
+            type = spinner
+            minValue = 0
+            maxValue = 359
+            input = float
+            step = 1
+        scale
+            type = spinner
+            minValue = 0.1
+            maxValue = 100
+            input = float
+            step = 0.1
 tree2item
-    Scene
-        one
+    PB2
+        Geometry
             parent = ROOT
-            value = wazup
-            value = 129
-            editor = light
-            editor = position
-        two
-            parent = ROOT
-            value = 0
-            value = abc
-            editor = position
-            editor = another
-        three
-            parent = ROOT
-        four
-            parent = ROOT
-        five
-            parent = ROOT
-        2_1
-            parent = four
-        2_2
-            parent = four
-        2_3
-            parent = four
-        3_1
-            parent = 2_2
-        3_2
-            parent = 2_2
-        six
-            parent = ROOT
-        seven
-            parent = ROOT
-        eight
-            parent = ROOT
-        nine
-            parent = ROOT
-        ten
-            parent = ROOT
-        eleven
-            parent = ROOT
-        twelve
-            parent = ROOT
-        thirteen
-            parent = ROOT
-        forteen
-            parent = ROOT
-        fifteen
-            parent = ROOT
-        sixteen
-            parent = ROOT
-        seventeen
-            parent = ROOT
-        eighteen
-            parent = ROOT
-        nineteen
-            parent = ROOT
-        twenty
-            parent = ROOT
-        f_1
-            parent = fifteen
-        f_2
-            parent = fifteen
-        f_3
-            parent = fifteen
-        f_4
-            parent = fifteen
 dock
     SceneTree
         child = tree.Scene
         title = Scene tree
-    SceneTree2
-        child = tree2.Scene
-        title = Scene tree #2
+    PB2
+        child = tree2.PB2
+        title = Property browser2
+    Scene2Tree
+        child = tree2.Scene2
+        title = Scene2 tree
 thumbnaildialog
     model
         title = Select model
@@ -201,6 +154,7 @@ dock
 mainwindow
     dock = SceneTree right
     dock = ScenePropertyBrowser right
-    dock = SceneTree2 left
+    dock = Scene2Tree left
+    dock = PB2 left
     visible = 1
 
