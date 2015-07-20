@@ -47,9 +47,12 @@ tree2editor
     PB2
         light
             type = combobox
-        another
+        material
             type = thumbnailDialog
-            thumbnailDialog = another
+            thumbnailDialog = material
+        model
+            type = thumbnailDialog
+            thumbnailDialog = model
         position
             type = spinner
             minValue = -1000
@@ -68,9 +71,19 @@ tree2editor
             maxValue = 100
             input = float
             step = 0.1
+        script
+            type = combobox
 tree2item
     PB2
         Geometry
+            parent = ROOT
+        Light
+            parent = ROOT
+        Material
+            parent = ROOT
+        Model
+            parent = ROOT
+        Script
             parent = ROOT
 dock
     SceneTree
@@ -89,25 +102,6 @@ thumbnaildialog
     material
         title = Select material
         ui = ui/ThumbnailDialog.ui
-    another
-        title = Select another
-        ui = ui/ThumbnailDialog.ui
-thumbnaildialogitem
-    another
-        abc
-            title = abc
-            image = pipeline/textures/noise_tex.png
-        def
-            title = def
-            image = pipeline/textures/noise_tex.png
-        ghi
-            title = ghi
-            image = pipeline/textures/noise_tex.png
-thumbnaildialog
-    another
-        item = abc
-        item = def
-        item = ghi
 propertybrowsereditor
     PropertyBrowser
         light
