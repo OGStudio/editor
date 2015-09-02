@@ -103,11 +103,28 @@ tree2
         column = Key
         column = Value
         instantEditing = 1
+tree2editor
+    Actions
+        delay
+            type = spinner
+            minValue = 10
+            maxValue = 100000
+            input = integer
+            step = 1
+        material
+            type = combobox
+            item = makeCraneBaseSurfaceGlow
+            item = makeCraneBaseSurfaceSimple
+        moveBy
+            type = combobox
+            item = moveBelt
+            item = moveSubject
 tree2item
     Actions
         material
             parent = ROOT
             value  = makeCraneBaseSurfaceGlow
+            editor = material
         node
             parent = material
             value  = craneBase
@@ -116,9 +133,11 @@ tree2item
         delay_
             parent = delay
             value  = 500
+            editor = delay
         material_
             parent = ROOT
             value  = makeCraneBaseSurfaceSimple
+            editor = material
         node_
             parent = material_
             value  = craneBase
@@ -128,11 +147,13 @@ tree2item
         delay___
             parent = delay__
             value  = 500
+            editor = delay
         spawn
             parent = ROOT
         moveBy
             parent = spawn
             value  = moveBelt
+            editor = moveBy
         node__
             parent = moveBy
             value  = lineBelt1
@@ -149,15 +170,20 @@ tree2item
         material__
             parent = sequence
             value  = makeCraneBaseSurfaceGlow
+            editor = material
         node____
             parent = material__
             value  = craneBase
         delay____
             parent = sequence
+        delay_____
+            parent = delay____
             value  = 500
+            editor = delay
         material___
             parent = sequence
             value  = makeCraneBaseSurfaceGlow
+            editor = material
         node_____
             parent = material___
             value  = craneBase
