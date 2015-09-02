@@ -1,8 +1,3 @@
-filedialog
-    NewProject
-        title = New project
-    OpenProject
-        title = Open project
 action
     SceneAddNode
         title = Add node
@@ -12,41 +7,36 @@ action
         title = Delete node
     ScenePasteNode
         title = Paste node
-    Scene2Add
-        title = Add
-    Scene2Copy
-        title = Copy
-    Scene2Delete
-        title = Delete
-    Scene2Paste
-        title = Paste
 menu
     SceneMenu
         action = SceneAddNode
         action = SceneCopyNode
         action = ScenePasteNode
         action = SceneDeleteNode
-    Scene2Menu
-        action = Scene2Add
-        action = Scene2Copy
-        action = Scene2Paste
-        action = Scene2Delete
-tree
-    Scene
-        menu = SceneMenu
+thumbnailDialog
+    light
+        title = Select light
+        ui = ui/ThumbnailDialog.ui
+    material
+        title = Select material
+        ui = ui/ThumbnailDialog.ui
+    model
+        title = Select model
+        ui = ui/ThumbnailDialog.ui
 tree2
-    PB2
+    Properties
         column = Key
         column = Value
         instantEditing = 1
-    Scene2
-        menu = Scene2Menu
+    Scene
+        menu = SceneMenu
         dragAndDrop = 1
         renaming = 1
 tree2editor
-    PB2
+    Properties
         light
-            type = combobox
+            type = thumbnailDialog
+            thumbnailDialog = light
         material
             type = thumbnailDialog
             thumbnailDialog = material
@@ -71,84 +61,119 @@ tree2editor
             maxValue = 100
             input = float
             step = 0.1
-        script
-            type = combobox
 tree2item
-    PB2
+    Properties
         Geometry
             parent = ROOT
-        Light
-            parent = ROOT
+        positionx
+            parent = Geometry
+            editor = position
+        positiony
+            parent = Geometry
+            editor = position
+        positionz
+            parent = Geometry
+            editor = position
+        scalex
+            parent = Geometry
+            editor = scale
+        scaley
+            parent = Geometry
+            editor = scale
+        scalez
+            parent = Geometry
+            editor = scale
         Material
             parent = ROOT
+        material
+            parent = Material
+            editor = material
         Model
             parent = ROOT
-        Script
-            parent = ROOT
-dock
-    SceneTree
-        child = tree.Scene
-        title = Scene tree
-    PB2
-        child = tree2.PB2
-        title = Property browser2
-    Scene2Tree
-        child = tree2.Scene2
-        title = Scene2 tree
-thumbnaildialog
-    model
-        title = Select model
-        ui = ui/ThumbnailDialog.ui
-    material
-        title = Select material
-        ui = ui/ThumbnailDialog.ui
-propertybrowsereditor
-    PropertyBrowser
-        light
-            type = combobox
-        material
-            type = thumbnaildialog
-            thumbnaildialog = material
         model
-            type = thumbnaildialog
-            thumbnaildialog = model
-        position
-            type = spinner
-            minvalue = -1000
-            maxvalue = 1000
-            input = float
-            step = 0.1
-        rotation
-            type = spinner
-            minvalue = 0
-            maxvalue = 359
-            input = float
-            step = 1
-        scale
-            type = spinner
-            minvalue = 0.1
-            maxvalue = 100
-            input = float
-            step = 0.1
-        script
-            type = combobox
-propertybrowseritem
-    PropertyBrowser
-        positionx
-            title = position.x
-            group = Geometry
-            value = 1.2
-propertybrowser
-    PropertyBrowser
-        item = positionx
+            parent = Model
+            editor = model
+        Light
+            parent = ROOT
+        light
+            parent = Light
+            editor = light
+tree2
+    Actions
+        column = Key
+        column = Value
+        instantEditing = 1
+tree2item
+    Actions
+        material
+            parent = ROOT
+            value  = makeCraneBaseSurfaceGlow
+        node
+            parent = material
+            value  = craneBase
+        delay
+            parent = ROOT
+        delay_
+            parent = delay
+            value  = 500
+        material_
+            parent = ROOT
+            value  = makeCraneBaseSurfaceSimple
+        node_
+            parent = material_
+            value  = craneBase
+        delay__
+            parent = ROOT
+            value  = blinkDelay
+        delay___
+            parent = delay__
+            value  = 500
+        spawn
+            parent = ROOT
+        moveBy
+            parent = spawn
+            value  = moveBelt
+        node__
+            parent = moveBy
+            value  = lineBelt1
+        moveBy_
+            parent = spawn
+        template
+            parent = moveBy_
+            value  = moveBelt
+        node___
+            parent = moveBy_
+            value  = subject
+        sequence
+            parent = spawn
+        material__
+            parent = sequence
+            value  = makeCraneBaseSurfaceGlow
+        node____
+            parent = material__
+            value  = craneBase
+        delay____
+            parent = sequence
+            value  = 500
+        material___
+            parent = sequence
+            value  = makeCraneBaseSurfaceGlow
+        node_____
+            parent = material___
+            value  = craneBase
 dock
-    ScenePropertyBrowser
-        child = propertybrowser.PropertyBrowser
-        title = Property browser
+    Actions
+        child = tree2.Actions
+        title = Actions
+    SceneTree
+        child = tree2.Scene
+        title = Scene
+    PropertyBrowser
+        child = tree2.Properties
+        title = Properties
 mainwindow
+    dock = Actions left
     dock = SceneTree right
-    dock = ScenePropertyBrowser right
-    dock = Scene2Tree left
-    dock = PB2 left
+    dock = PropertyBrowser right
     visible = 1
 

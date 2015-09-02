@@ -1,0 +1,154 @@
+filedialog
+    NewProject
+        title = New project
+    OpenProject
+        title = Open project
+action
+    SceneAddNode
+        title = Add node
+    SceneCopyNode
+        title = Copy node
+    SceneDeleteNode
+        title = Delete node
+    ScenePasteNode
+        title = Paste node
+    Scene2Add
+        title = Add
+    Scene2Copy
+        title = Copy
+    Scene2Delete
+        title = Delete
+    Scene2Paste
+        title = Paste
+menu
+    SceneMenu
+        action = SceneAddNode
+        action = SceneCopyNode
+        action = ScenePasteNode
+        action = SceneDeleteNode
+    Scene2Menu
+        action = Scene2Add
+        action = Scene2Copy
+        action = Scene2Paste
+        action = Scene2Delete
+tree
+    Scene
+        menu = SceneMenu
+tree2
+    PB2
+        column = Key
+        column = Value
+        instantEditing = 1
+    Scene2
+        menu = Scene2Menu
+        dragAndDrop = 1
+        renaming = 1
+tree2editor
+    PB2
+        light
+            type = combobox
+        material
+            type = thumbnailDialog
+            thumbnailDialog = material
+        model
+            type = thumbnailDialog
+            thumbnailDialog = model
+        position
+            type = spinner
+            minValue = -1000
+            maxValue = 1000
+            input = float
+            step = 0.1
+        rotation
+            type = spinner
+            minValue = 0
+            maxValue = 359
+            input = float
+            step = 1
+        scale
+            type = spinner
+            minValue = 0.1
+            maxValue = 100
+            input = float
+            step = 0.1
+        script
+            type = combobox
+tree2item
+    PB2
+        Geometry
+            parent = ROOT
+        Light
+            parent = ROOT
+        Material
+            parent = ROOT
+        Model
+            parent = ROOT
+        Script
+            parent = ROOT
+dock
+    SceneTree
+        child = tree.Scene
+        title = Scene tree
+    PB2
+        child = tree2.PB2
+        title = Property browser2
+    Scene2Tree
+        child = tree2.Scene2
+        title = Scene2 tree
+thumbnaildialog
+    model
+        title = Select model
+        ui = ui/ThumbnailDialog.ui
+    material
+        title = Select material
+        ui = ui/ThumbnailDialog.ui
+propertybrowsereditor
+    PropertyBrowser
+        light
+            type = combobox
+        material
+            type = thumbnaildialog
+            thumbnaildialog = material
+        model
+            type = thumbnaildialog
+            thumbnaildialog = model
+        position
+            type = spinner
+            minvalue = -1000
+            maxvalue = 1000
+            input = float
+            step = 0.1
+        rotation
+            type = spinner
+            minvalue = 0
+            maxvalue = 359
+            input = float
+            step = 1
+        scale
+            type = spinner
+            minvalue = 0.1
+            maxvalue = 100
+            input = float
+            step = 0.1
+        script
+            type = combobox
+propertybrowseritem
+    PropertyBrowser
+        positionx
+            title = position.x
+            group = Geometry
+            value = 1.2
+propertybrowser
+    PropertyBrowser
+        item = positionx
+dock
+    ScenePropertyBrowser
+        child = propertybrowser.PropertyBrowser
+        title = Property browser
+mainwindow
+    dock = SceneTree right
+    dock = ScenePropertyBrowser right
+    dock = Scene2Tree left
+    dock = PB2 left
+    visible = 1
+

@@ -23,7 +23,7 @@
     <buffer name="pass2Final"     template="bufferTemplate" />
     <uniform name="lightPos" type="vec3">
         <!-- Just a place holder. Altered in code. -->
-        <value>0 0 0</value>
+        <value>0 10 10</value>
     </uniform>
     
     <technique>
