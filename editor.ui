@@ -61,48 +61,40 @@ tree2editor
             maxValue = 100
             input = float
             step = 0.1
+        script
+            type = combobox
 tree2item
     Properties
-        Geometry
-            parent = ROOT
         positionx
-            parent = Geometry
+            parent = ROOT
             editor = position
         positiony
-            parent = Geometry
+            parent = ROOT
             editor = position
         positionz
-            parent = Geometry
+            parent = ROOT
             editor = position
         scalex
-            parent = Geometry
+            parent = ROOT
             editor = scale
         scaley
-            parent = Geometry
+            parent = ROOT
             editor = scale
         scalez
-            parent = Geometry
+            parent = ROOT
             editor = scale
-        Material
-            parent = ROOT
         material
-            parent = Material
+            parent = ROOT
             editor = material
-        Model
-            parent = ROOT
         model
-            parent = Model
-            editor = model
-        Light
             parent = ROOT
+            editor = model
         light
-            parent = Light
+            parent = ROOT
             editor = light
-tree2
-    Actions
-        column = Key
-        column = Value
-        instantEditing = 1
+        script
+            parent = ROOT
+            editor = script
 tree2editor
     Actions
         delay
@@ -119,78 +111,7 @@ tree2editor
             type = combobox
             item = moveBelt
             item = moveSubject
-tree2item
-    Actions
-        material
-            parent = ROOT
-            value  = makeCraneBaseSurfaceGlow
-            editor = material
-        node
-            parent = material
-            value  = craneBase
-        delay
-            parent = ROOT
-        delay_
-            parent = delay
-            value  = 500
-            editor = delay
-        material_
-            parent = ROOT
-            value  = makeCraneBaseSurfaceSimple
-            editor = material
-        node_
-            parent = material_
-            value  = craneBase
-        delay__
-            parent = ROOT
-            value  = blinkDelay
-        delay___
-            parent = delay__
-            value  = 500
-            editor = delay
-        spawn
-            parent = ROOT
-        moveBy
-            parent = spawn
-            value  = moveBelt
-            editor = moveBy
-        node__
-            parent = moveBy
-            value  = lineBelt1
-        moveBy_
-            parent = spawn
-        template
-            parent = moveBy_
-            value  = moveBelt
-        node___
-            parent = moveBy_
-            value  = subject
-        sequence
-            parent = spawn
-        material__
-            parent = sequence
-            value  = makeCraneBaseSurfaceGlow
-            editor = material
-        node____
-            parent = material__
-            value  = craneBase
-        delay____
-            parent = sequence
-        delay_____
-            parent = delay____
-            value  = 500
-            editor = delay
-        material___
-            parent = sequence
-            value  = makeCraneBaseSurfaceGlow
-            editor = material
-        node_____
-            parent = material___
-            value  = craneBase
 dock
-    Actions
-        child = tree2.Actions
-        title = Actions
     SceneTree
         child = tree2.Scene
         title = Scene
@@ -198,8 +119,7 @@ dock
         child = tree2.Properties
         title = Properties
 mainwindow
-    dock = Actions left
-    dock = SceneTree right
+    dock = SceneTree left
     dock = PropertyBrowser right
     visible = 1
 
