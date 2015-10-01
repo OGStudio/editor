@@ -74,6 +74,15 @@ tree2item
         positionz
             parent = ROOT
             editor = position
+        rotationx
+            parent = ROOT
+            editor = rotation
+        rotationy
+            parent = ROOT
+            editor = rotation
+        rotationz
+            parent = ROOT
+            editor = rotation
         scalex
             parent = ROOT
             editor = scale
