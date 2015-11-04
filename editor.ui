@@ -51,8 +51,8 @@ tree2editor
             step = 0.1
         rotation
             type = spinner
-            minValue = 0
-            maxValue = 359
+            minValue = -3590
+            maxValue = 3590
             input = float
             step = 1
         scale
