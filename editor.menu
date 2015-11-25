@@ -11,6 +11,12 @@ action
     FileQuit
         title = &Quit
         shortcut = STANDARD_KEY_QUIT
+    ViewLeft
+        title = &Left
+        shortcut = Ctrl+3
+    ViewRight
+        title = &Right
+        shortcut = 3
 menu
     File
         title = &File
@@ -18,8 +24,13 @@ menu
 #        action = FileOpen
         action = FileSave
         action = FileQuit
+    View
+        title = &View
+        action = ViewLeft
+        action = ViewRight
 menubar
     MenuBar
         menu = File
+        menu = View
 
 mainwindow.menubar = MenuBar

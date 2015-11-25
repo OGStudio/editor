@@ -57,10 +57,10 @@ tree2editor
             step = 1
         scale
             type = spinner
-            minValue = 0.1
-            maxValue = 100
+            minValue = 0.01
+            maxValue = 10
             input = float
-            step = 0.1
+            step = 0.01
         script
             type = combobox
 tree2item
