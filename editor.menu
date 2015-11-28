@@ -11,6 +11,10 @@ action
     FileQuit
         title = &Quit
         shortcut = STANDARD_KEY_QUIT
+    ViewFPS
+        title = &FPS
+        checkable = 1
+        shortcut = C
     ViewLeft
         title = &Left
         shortcut = Ctrl+3
@@ -26,6 +30,7 @@ menu
         action = FileQuit
     View
         title = &View
+        action = ViewFPS
         action = ViewLeft
         action = ViewRight
 menubar
