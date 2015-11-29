@@ -12,3 +12,6 @@ shortcut
             shortcut = ALT+W
         down
             shortcut = ALT+S
+    node
+        select
+            shortcut = LMB

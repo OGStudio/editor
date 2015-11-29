@@ -17,10 +17,22 @@ action
         shortcut = C
     ViewLeft
         title = &Left
-        shortcut = Ctrl+3
+        shortcut = CTRL+3
     ViewRight
         title = &Right
         shortcut = 3
+    ViewBack
+        title = &Back
+        shortcut = CTRL+1
+    ViewFront
+        title = &Front
+        shortcut = 1
+    ViewBottom
+        title = &Bottom
+        shortcut = CTRL+7
+    ViewTop
+        title = &Top
+        shortcut = 7
 menu
     File
         title = &File
@@ -33,6 +45,10 @@ menu
         action = ViewFPS
         action = ViewLeft
         action = ViewRight
+        action = ViewBack
+        action = ViewFront
+        action = ViewBottom
+        action = ViewTop
 menubar
     MenuBar
         menu = File
