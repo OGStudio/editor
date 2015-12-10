@@ -1,1 +1,5 @@
 filename = pipeline/compositor.xml
+
+compositor
+    main
+        file = pipeline/compositor.xml
