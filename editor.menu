@@ -33,6 +33,12 @@ action
     ViewTop
         title = &Top
         shortcut = 7
+    ViewSyncNodeToCamera
+        title = Sync node to camera
+        shortcut = CTRL+0
+    ViewSyncCameraToNode
+        title = Sync camera to node
+        shortcut = 0
 menu
     File
         title = &File
@@ -49,6 +55,8 @@ menu
         action = ViewFront
         action = ViewBottom
         action = ViewTop
+        action = ViewSyncNodeToCamera
+        action = ViewSyncCameraToNode
 menubar
     MenuBar
         menu = File

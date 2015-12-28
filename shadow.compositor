@@ -1,1 +1,5 @@
 filename = pipeline/shadowCompositor.xml
+
+compositor
+    shadow
+        file = pipeline/shadowCompositor.xml

@@ -63,6 +63,10 @@ tree2editor
             step = 0.01
         script
             type = combobox
+        selectable
+            type = combobox
+            item = False
+            item = True
 tree2item
     Properties
         positionx
@@ -104,6 +108,9 @@ tree2item
         script
             parent = ROOT
             editor = script
+        selectable
+            parent = ROOT
+            editor = selectable
 tree2editor
     Actions
         delay
