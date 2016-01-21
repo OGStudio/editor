@@ -38,7 +38,7 @@ action
         shortcut = CTRL+0
     ViewSyncCameraToNode
         title = Sync camera to node
-        shortcut = 0
+#        shortcut = 0
 menu
     File
         title = &File
