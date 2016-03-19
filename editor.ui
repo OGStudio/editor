@@ -16,6 +16,8 @@ menu
 fileDialog
     open
         title = Open OpenGameStudio project
+    save
+        title = Save OpenGameStudio project
 thumbnailDialog
     light
         title = Select light
