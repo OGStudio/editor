@@ -13,6 +13,9 @@ menu
         action = SceneCopyNode
         action = ScenePasteNode
         action = SceneDeleteNode
+fileDialog
+    open
+        title = Open OpenGameStudio project
 thumbnailDialog
     light
         title = Select light
