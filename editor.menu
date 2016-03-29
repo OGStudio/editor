@@ -5,6 +5,9 @@ action
     FileOpen
         title = &Open
         shortcut = STANDARD_KEY_OPEN
+    FilePlay
+        title = &Play
+        shortcut = CTRL+P
     FileSave
         title = &Save
         shortcut = STANDARD_KEY_SAVE
@@ -49,6 +52,7 @@ menu
         action = FileOpen
         action = FileSave
         action = FileSaveAs
+        action = FilePlay
         action = FileQuit
     View
         title = &View
