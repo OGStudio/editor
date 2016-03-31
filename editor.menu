@@ -21,6 +21,10 @@ action
         title = &FPS
         checkable = 1
         shortcut = C
+    ViewOrtho
+        title = &Orthographic projection
+        checkable = 1
+        shortcut = O
     ViewLeft
         title = &Left
         shortcut = CTRL+3
@@ -44,7 +48,6 @@ action
         shortcut = CTRL+0
     ViewSyncCameraToNode
         title = Sync camera to node
-#        shortcut = 0
 menu
     File
         title = &File
@@ -57,6 +60,7 @@ menu
     View
         title = &View
         action = ViewFPS
+        action = ViewOrtho
         action = ViewLeft
         action = ViewRight
         action = ViewBack
