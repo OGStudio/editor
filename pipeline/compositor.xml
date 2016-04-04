@@ -25,6 +25,9 @@
         <!-- Just a place holder. Altered in code. -->
         <value>0 10 10</value>
     </uniform>
+    <uniform name="noEffects" type="int">
+        <value>0</value>
+    </uniform>
     
     <technique>
         <forward_pass name="pass1">
@@ -55,6 +58,7 @@
             <input_buffer unit="4" varname="shadowMap">pass1Colors</input_buffer>
             <input_buffer unit="5" varname="uiMap">pass1UI</input_buffer>
             <uniform>lightPos</uniform>
+            <uniform>noEffects</uniform>
             <shader>pass2VS</shader>
             <shader>pass2FS</shader>
             <output_buffer target="color">pass2Final</output_buffer>

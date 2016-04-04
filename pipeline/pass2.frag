@@ -1,6 +1,7 @@
 
 uniform mat4 osg_ViewMatrixInverse;
 uniform vec3 lightPos;
+uniform int noEffects;
 uniform sampler2DRect positionMap;
 uniform sampler2DRect colorMap;
 uniform sampler2DRect normalMap;
@@ -26,8 +27,14 @@ vec3 glowBlur(sampler2DRect glowMap,
 
 void main()
 {
+    vec3 c_worldspace = texture2DRect(colorMap, gl_FragCoord.xy).xyz;
+    // Do not calculate any effects, only plain diffuse map.
+    if (noEffects > 0)
+    {
+        gl_FragColor = vec4(c_worldspace, 1.0);
+        return;
+    }
     vec3 p_worldspace = texture2DRect(positionMap, gl_FragCoord.xy).xyz;
-    vec3 c_worldspace = texture2DRect(colorMap,    gl_FragCoord.xy).xyz;
     vec3 n_worldspace = texture2DRect(normalMap,   gl_FragCoord.xy).xyz;
     vec3 s_worldspace = texture2DRect(shadowMap,   gl_FragCoord.xy).xyz;
     vec3 g_worldspace = glowBlur(glowMap, gl_FragCoord.xy, 10, vec2(3, 3));
