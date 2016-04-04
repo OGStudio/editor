@@ -21,6 +21,10 @@ action
         title = &FPS
         checkable = 1
         shortcut = C
+    ViewEffects
+        title = &Effects
+        checkable = 1
+        checked = 1
     ViewOrtho
         title = &Orthographic projection
         checkable = 1
@@ -60,6 +64,7 @@ menu
     View
         title = &View
         action = ViewFPS
+        action = ViewEffects
         action = ViewOrtho
         action = ViewLeft
         action = ViewRight
