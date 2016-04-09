@@ -63,7 +63,7 @@ tree2editor
         scale
             type = spinner
             minValue = 0.01
-            maxValue = 10
+            maxValue = 1000
             input = float
             step = 0.01
         script

@@ -5,6 +5,9 @@ action
     FileOpen
         title = &Open
         shortcut = STANDARD_KEY_OPEN
+    FileReopen
+        title = &Reopen
+        shortcut = CTRL+R
     FilePlay
         title = &Play
         shortcut = CTRL+P
@@ -57,6 +60,7 @@ menu
         title = &File
         action = FileNew
         action = FileOpen
+        action = FileReopen
         action = FileSave
         action = FileSaveAs
         action = FilePlay
