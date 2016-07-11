@@ -1,86 +1,91 @@
 action
-    FileNew
-        title = &New
-        shortcut = STANDARD_KEY_NEW
-    FileOpen
-        title = &Open
-        shortcut = STANDARD_KEY_OPEN
-    FileReopen
-        title = &Reopen
-        shortcut = CTRL+R
-    FilePlay
-        title = &Play
-        shortcut = CTRL+P
-    FileSave
-        title = &Save
-        shortcut = STANDARD_KEY_SAVE
-    FileSaveAs
-        title = Save &as
-        shortcut = STANDARD_KEY_SAVE_AS
-    FileQuit
-        title = &Quit
-        shortcut = STANDARD_KEY_QUIT
-    ViewFPS
-        title = &FPS
-        checkable = 1
-        shortcut = C
-    ViewEffects
-        title = &Effects
-        checkable = 1
-        checked = 1
-    ViewOrtho
-        title = &Orthographic projection
-        checkable = 1
-        shortcut = O
-    ViewLeft
-        title = &Left
-        shortcut = CTRL+3
-    ViewRight
-        title = &Right
-        shortcut = 3
-    ViewBack
-        title = &Back
-        shortcut = CTRL+1
-    ViewFront
-        title = &Front
-        shortcut = 1
-    ViewBottom
-        title = &Bottom
-        shortcut = CTRL+7
-    ViewTop
-        title = &Top
-        shortcut = 7
-    ViewSyncNodeToCamera
-        title = Sync node to camera
-        shortcut = CTRL+0
-    ViewSyncCameraToNode
-        title = Sync camera to node
+    editor
+        FileNew
+            title = &New
+            shortcut = STANDARD_KEY_NEW
+        FileOpen
+            title = &Open
+            shortcut = STANDARD_KEY_OPEN
+        FileReopen
+            title = &Reopen
+            shortcut = CTRL+R
+        FilePlay
+            title = &Play
+            shortcut = CTRL+P
+        FileSave
+            title = &Save
+            shortcut = STANDARD_KEY_SAVE
+        FileSaveAs
+            title = Save &as
+            shortcut = STANDARD_KEY_SAVE_AS
+        FileQuit
+            title = &Quit
+            shortcut = STANDARD_KEY_QUIT
+        ViewFPS
+            title = &FPS
+            checkable = 1
+            shortcut = C
+        ViewEffects
+            title = &Effects
+            checkable = 1
+            checked = 1
+        ViewOrtho
+            title = &Orthographic projection
+            checkable = 1
+            shortcut = O
+        ViewLeft
+            title = &Left
+            shortcut = CTRL+3
+        ViewRight
+            title = &Right
+            shortcut = 3
+        ViewBack
+            title = &Back
+            shortcut = CTRL+1
+        ViewFront
+            title = &Front
+            shortcut = 1
+        ViewBottom
+            title = &Bottom
+            shortcut = CTRL+7
+        ViewTop
+            title = &Top
+            shortcut = 7
+        ViewSyncNodeToCamera
+            title = Sync node to camera
+            shortcut = CTRL+0
+        ViewSyncCameraToNode
+            title = Sync camera to node
 menu
-    File
-        title = &File
-        action = FileNew
-        action = FileOpen
-        action = FileReopen
-        action = FileSave
-        action = FileSaveAs
-        action = FilePlay
-        action = FileQuit
-    View
-        title = &View
-        action = ViewFPS
-        action = ViewEffects
-        action = ViewOrtho
-        action = ViewLeft
-        action = ViewRight
-        action = ViewBack
-        action = ViewFront
-        action = ViewBottom
-        action = ViewTop
-        action = ViewSyncNodeToCamera
-        action = ViewSyncCameraToNode
-menubar
-    MenuBar
-        menu = File
-        menu = View
-
-mainwindow.menubar = MenuBar
+    editor
+        File
+            title = &File
+            action = FileNew
+            action = FileOpen
+            action = FileReopen
+            action = FileSave
+            action = FileSaveAs
+            action = FilePlay
+            action = FileQuit
+        View
+            title = &View
+            action = ViewFPS
+            action = ViewEffects
+            action = ViewOrtho
+            action = ViewLeft
+            action = ViewRight
+            action = ViewBack
+            action = ViewFront
+            action = ViewBottom
+            action = ViewTop
+            action = ViewSyncNodeToCamera
+            action = ViewSyncCameraToNode
+menuBar
+    editor
+        MenuBar
+            menu = File
+            menu = View
+mainWindow
+    editor
+        MainWindow
+            menuBar = MenuBar

@@ -1,12 +1,13 @@
 action
-    SceneAddNode
-        title = Add node
-    SceneCopyNode
-        title = Copy node
-    SceneDeleteNode
-        title = Delete node
-    ScenePasteNode
-        title = Paste node
+    editor
+        SceneAddNode
+            title = Add node
+        SceneCopyNode
+            title = Copy node
+        SceneDeleteNode
+            title = Delete node
+        ScenePasteNode
+            title = Paste node
 menu
     SceneMenu
         action = SceneAddNode
@@ -14,10 +15,11 @@ menu
         action = ScenePasteNode
         action = SceneDeleteNode
 fileDialog
-    open
-        title = Open OpenGameStudio project
-    save
-        title = Save OpenGameStudio project
+    editor
+        open
+            title = Open OpenGameStudio project
+        save
+            title = Save OpenGameStudio project
 thumbnailDialog
     light
         title = Select light
