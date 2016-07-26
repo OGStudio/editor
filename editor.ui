@@ -21,24 +21,40 @@ fileDialog
         save
             title = Save OpenGameStudio project
 thumbnailDialog
-    light
-        title = Select light
-        ui = ui/ThumbnailDialog.ui
-    material
-        title = Select material
-        ui = ui/ThumbnailDialog.ui
-    model
-        title = Select model
-        ui = ui/ThumbnailDialog.ui
-tree2
-    Properties
-        column = Key
-        column = Value
-        instantEditing = 1
-    Scene
-        menu = SceneMenu
-        dragAndDrop = 1
-        renaming = 1
+    editor
+        light
+            title = Select light
+        material
+            title = Select material
+        model
+            title = Select model
+
+
+
+thumbnailDialogItem
+    editor
+        model
+            sample
+                title = Sample
+                image = pipeline/textures/noise_tex.png
+            resample
+                title = RESample
+                image = pipeline/textures/noise_tex.png
+            third
+                title = 3rd item
+                image = pipeline/textures/noise_tex.png
+
+tree
+    editor
+        Properties
+            column = Key
+            column = Value
+            instantEditingEnabled = 1
+        Scene
+            menu = SceneMenu
+            dragAndDropEnabled = 1
+            renamingEnabled = 1
+
 tree2editor
     Properties
         light
@@ -135,14 +151,16 @@ tree2editor
             item = moveBelt
             item = moveSubject
 dock
-    SceneTree
-        child = tree2.Scene
-        title = Scene
-    PropertyBrowser
-        child = tree2.Properties
-        title = Properties
-mainwindow
-    dock = SceneTree left
-    dock = PropertyBrowser right
-    visible = 1
-
+    editor
+        SceneTree
+            child = Scene
+            title = Scene
+        PropertyBrowser
+            child = Properties
+            title = Properties
+mainWindow
+    editor
+        MainWindow
+            dock = SceneTree left
+            dock = PropertyBrowser right
+            visible = 1
