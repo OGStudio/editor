@@ -9,11 +9,12 @@ action
         ScenePasteNode
             title = Paste node
 menu
-    SceneMenu
-        action = SceneAddNode
-        action = SceneCopyNode
-        action = ScenePasteNode
-        action = SceneDeleteNode
+    editor
+        SceneMenu
+            action = SceneAddNode
+            action = SceneCopyNode
+            action = ScenePasteNode
+            action = SceneDeleteNode
 fileDialog
     editor
         open
