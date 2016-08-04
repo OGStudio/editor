@@ -1,13 +1,13 @@
 action
     editor
         SceneAddNode
-            title = Add node
+            title = ADD new node
         SceneCopyNode
-            title = Copy node
+            title = COPY selected node
         SceneDeleteNode
-            title = Delete node
+            title = DELETE selected node
         ScenePasteNode
-            title = Paste node
+            title = PASTE copied node
 menu
     editor
         SceneMenu
