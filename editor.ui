@@ -29,9 +29,6 @@ thumbnailDialog
             title = Select material
         model
             title = Select model
-
-
-
 thumbnailDialogItem
     editor
         model
@@ -44,7 +41,6 @@ thumbnailDialogItem
             third
                 title = 3rd item
                 image = pipeline/textures/noise_tex.png
-
 tree
     editor
         Properties
@@ -56,85 +52,76 @@ tree
             dragAndDropEnabled = 1
             renamingEnabled = 1
 
-tree2editor
-    Properties
-        light
-            type = thumbnailDialog
-            thumbnailDialog = light
-        material
-            type = thumbnailDialog
-            thumbnailDialog = material
-        model
-            type = thumbnailDialog
-            thumbnailDialog = model
-        position
-            type = spinner
-            minValue = -1000
-            maxValue = 1000
-            input = float
-            step = 0.001
-        rotation
-            type = spinner
-            minValue = -3590
-            maxValue = 3590
-            input = float
-            step = 1
-        scale
-            type = spinner
-            minValue = 0.01
-            maxValue = 1000
-            input = float
-            step = 0.01
-        script
-            type = combobox
-        selectable
-            type = combobox
-            item = False
-            item = True
-tree2item
-    Properties
-        positionx
-            parent = ROOT
-            editor = position
-        positiony
-            parent = ROOT
-            editor = position
-        positionz
-            parent = ROOT
-            editor = position
-        rotationx
-            parent = ROOT
-            editor = rotation
-        rotationy
-            parent = ROOT
-            editor = rotation
-        rotationz
-            parent = ROOT
-            editor = rotation
-        scalex
-            parent = ROOT
-            editor = scale
-        scaley
-            parent = ROOT
-            editor = scale
-        scalez
-            parent = ROOT
-            editor = scale
-        material
-            parent = ROOT
-            editor = material
-        model
-            parent = ROOT
-            editor = model
-        light
-            parent = ROOT
-            editor = light
-        script
-            parent = ROOT
-            editor = script
-        selectable
-            parent = ROOT
-            editor = selectable
+treeEditor
+    editor
+        Properties
+            light
+                type = thumbnailDialog
+                thumbnailDialog = light
+            material
+                type = thumbnailDialog
+                thumbnailDialog = material
+            model
+                type = thumbnailDialog
+                thumbnailDialog = model
+            position
+                type = spinner
+                minValue = -1000
+                maxValue = 1000
+                input = float
+                step = 0.001
+            rotation
+                type = spinner
+                minValue = -3590
+                maxValue = 3590
+                input = float
+                step = 1
+            scale
+                type = spinner
+                minValue = 0.01
+                maxValue = 1000
+                input = float
+                step = 0.01
+            script
+                type = combobox
+            selectable
+                type = combobox
+                item = False
+                item = True
+treeItem
+    editor
+        Properties
+            positionx
+                editor = position
+                value = 1
+            positiony
+                editor = position
+                value = 123
+            positionz
+                editor = position
+                value = 512
+            rotationx
+                editor = rotation
+            rotationy
+                editor = rotation
+            rotationz
+                editor = rotation
+            scalex
+                editor = scale
+            scaley
+                editor = scale
+            scalez
+                editor = scale
+            material
+                editor = material
+            model
+                editor = model
+            light
+                editor = light
+            script
+                editor = script
+            selectable
+                editor = selectable
 tree2editor
     Actions
         delay
