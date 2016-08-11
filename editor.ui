@@ -93,13 +93,10 @@ treeItem
         Properties
             positionx
                 editor = position
-                value = 1
             positiony
                 editor = position
-                value = 123
             positionz
                 editor = position
-                value = 512
             rotationx
                 editor = rotation
             rotationy
