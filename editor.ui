@@ -51,19 +51,13 @@ tree
             menu = SceneMenu
             dragAndDropEnabled = 1
             renamingEnabled = 1
-
 treeEditor
     editor
         Properties
-            light
-                type = thumbnailDialog
-                thumbnailDialog = light
             material
-                type = thumbnailDialog
-                thumbnailDialog = material
+                type = combobox
             model
-                type = thumbnailDialog
-                thumbnailDialog = model
+                type = combobox
             position
                 type = spinner
                 minValue = -1000
@@ -113,28 +107,10 @@ treeItem
                 editor = material
             model
                 editor = model
-            light
-                editor = light
             script
                 editor = script
             selectable
                 editor = selectable
-tree2editor
-    Actions
-        delay
-            type = spinner
-            minValue = 10
-            maxValue = 100000
-            input = integer
-            step = 1
-        material
-            type = combobox
-            item = makeCraneBaseSurfaceGlow
-            item = makeCraneBaseSurfaceSimple
-        moveBy
-            type = combobox
-            item = moveBelt
-            item = moveSubject
 dock
     editor
         SceneTree
