@@ -21,6 +21,11 @@ action
         FileQuit
             title = &Quit
             shortcut = STANDARD_KEY_QUIT
+        EditSelectionMode
+            title = &Editor selection mode
+            checkable = 1
+            checked = 1
+            shortcut = E
         ViewFPS
             title = &FPS
             checkable = 1
@@ -75,6 +80,9 @@ menu
             action = FileSaveAs
             action = FilePlay
             action = FileQuit
+        Edit
+            title = &Edit
+            action = EditSelectionMode
         View
             title = &View
             action = ViewFPS
@@ -96,6 +104,7 @@ menuBar
     editor
         MenuBar
             menu = File
+            menu = Edit
             menu = View
 mainWindow
     editor
