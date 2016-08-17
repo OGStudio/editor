@@ -26,6 +26,7 @@ action
             checkable = 1
             checked = 1
             shortcut = E
+            icon = ui/icons/state_selection.png
         ViewFPS
             title = &FPS
             checkable = 1
@@ -34,10 +35,12 @@ action
             title = &Effects
             checkable = 1
             checked = 1
+            icon = ui/icons/state_effects.png
         ViewOrtho
             title = &Orthographic projection
             checkable = 1
             shortcut = O
+            icon = ui/icons/state_ortho.png
         ViewLeft
             title = &Left
             shortcut = CTRL+3
@@ -94,7 +97,15 @@ menuBar
             menu = File
             menu = Edit
             menu = View
+toolBar
+    editor
+        ToolBar
+            action = EditSelectionMode
+            action = ViewEffects
+            action = ViewOrtho
+            action = ViewFPS
 mainWindow
     editor
         MainWindow
             menuBar = MenuBar
+            toolBar = ToolBar
