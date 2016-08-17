@@ -61,14 +61,6 @@ action
             shortcut = CTRL+0
         ViewSyncCameraToNode
             title = Sync camera to node
-        ViewTMP
-            title = TMP
-        ViewTMPTitle
-            title = TMPTitle
-        ViewTMPDelete
-            title = TMPDelete
-        ViewTMPSceneAdd
-            title = TMPSceneAdd
 menu
     editor
         File
@@ -96,10 +88,6 @@ menu
             action = ViewTop
             action = ViewSyncNodeToCamera
             action = ViewSyncCameraToNode
-            action = ViewTMP
-            action = ViewTMPTitle
-            action = ViewTMPDelete
-            action = ViewTMPSceneAdd
 menuBar
     editor
         MenuBar
