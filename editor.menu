@@ -1,3 +1,7 @@
+menu
+    editor
+        Recent
+            title = Recent
 action
     editor
         FileNew
@@ -6,6 +10,9 @@ action
         FileOpen
             title = &Open
             shortcut = STANDARD_KEY_OPEN
+        FileOpenRecent
+            title = Open recent
+            menu = Recent
         FileReopen
             title = &Reopen
             shortcut = CTRL+R
@@ -70,6 +77,7 @@ menu
             title = &File
             action = FileNew
             action = FileOpen
+            action = FileOpenRecent
             action = FileReopen
             action = FileSave
             action = FileSaveAs
